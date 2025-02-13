@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glacier</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            padding: 0;
+            margin: 0;
+            font-family:Arial, Helvetica, sans-serif ;
+            height: 100%;
+        }
+        body .whole {
+            background: linear-gradient(80deg, #2f40db, #bb54ff);
+            padding: 20px;
+            margin: 5px;
+        }
+        .prog {
+            display: flex;
+            justify-content: right;
+        }
+        header h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: "Noto Sans", sans-serif;
+            font-weight: bold;
+            font-size: 60px;
+            padding-right: 450px;
+        }
+        .prog .academic{
+            background-color: #606060;
+            color: white;
+            border: solid white 1px;
+            margin-left: 200px;
+            margin-right: 60px;
+            margin-top: 40px;
+            border-radius: 10px;
+            padding: 5px;
+            padding-bottom: 0;
+            position: absolute;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+        header h2 {
+            color: #ffffff;
+            text-align: center;
+        }
+        nav {
+            padding: 1px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            padding: 3px;
+            border-radius: 7px;
+            border: black solid 1px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        nav ul li a:hover {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 3px;
+            background: linear-gradient(130deg,#8623ff, #1cd6f3);
+            border-radius: 7px;
+            box-shadow: 2px 3px 2px black;
+        }
+        nav ul li button {
+            padding: 5px 15px;
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(130deg,#8623ff, #1cd6f3);
+            border: none;
+            border-radius: 5px;
+        }
+        nav ul li button:hover {
+            padding: 5px 13px;
+            color: white;
+            background: linear-gradient(130deg, #1cd6f3,#8623ff);
+            border: none;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            border: solid rgb(40, 36, 255) 1px;
+            box-shadow: 2px 3px 2px  rgb(40, 36, 255);
+        }
+        hgroup {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .container1 {
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .container1 h2 {
+            padding: 10px;
+            text-align: center;
+            color: black;
+            margin-top: 30px;
+            background-color: #6ec4fa;
+            border-radius: 5px;
+        }
+        .container1 .our-success{
+            padding: 10px;
+            margin: 10px;
+        }
+        .container1 .our-success .img {
+            display: flex;
+            justify-content: space-around;
+        }
+        .container1 .our-success .img li {
+            list-style-type: none;
+            background-color: #6ec4fa;
+            border: solid black 1px;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .container1 .our-success .rank{
+            display: flex;
+            justify-content: space-around;
+        }
+        .container1 .our-success .rank li {
+            list-style-type: none;
+            color:#000000;
+            background-color: #6ec4fa;
+            border: solid black 1px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .container2 {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .container2 h2 {
+            text-align: center;
+            background-color: #6ec4fa;
+            margin-top: 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .container2 ul {
+            list-style-type: none;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content:space-around;
+            
+        }
+        .container2 ul li {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            background-color: #66c1e2;
+            width: 200px;
+            height: 160px;
+            border-radius: 5px;
+            text-align: center;
+            align-items: center;
+            padding-top: 60px;
+        }
+        .container2 ul li .btn {
+            margin-top: 100px;
+            padding: 5px 10px;
+            border-radius: 7px;
+            border: none;
+            text-decoration: none;
+            background-color: #8d2cf5;
+            color: #fff;
+            font-weight: bold;
+        }
+        .container2 ul li .btn:hover {
+            margin-top: 100px;
+            padding: 5px 10px;
+            border-radius: 7px;
+            border: none;
+            text-decoration: none;
+            background-color: #6008be;
+            color: #ffff50;
+            font-weight: bold;
+            border: solid #ffff50 2px;
+            box-shadow: 2px 3px 2px rgb(255, 255, 80);
+        }
+        footer h1 {
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .footer{
+            background-color: #000000;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer ul {
+            padding: 0;
+            list-style-type: none;
+            margin-top: 0;
+        }
+        .footer ul li {
+            margin-top: 10px;
+        }
+        .footer ul li a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer ul li a:hover {
+            text-decoration: none;
+            color: #0018f0;
+        }
+        img {
+           max-width: 100%;
+           height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="whole">
+    <header class="header">
+        <div class="prog">
+        <h1>
+            Learn With Glacier
+        </h1>
+        <div class="academic">
+            <p>Your academic progress :</p><progress max="100" value="20"></progress>
+        </div>
+        </div>
+        <h2>
+            We Teach You Learn
+        </h2>
+        <nav> 
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Study Materials</a></li>
+                <li><a href="#">Test Series</a></li>
+                <li><a href="#">Our Faculties</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><button type="submit">Login</button></li>
+            </ul>   
+        </nav>
+    </header>
+    <article>
+        <hgroup>
+            <h1>Achieve Your Dream of Cracking IIT, NEET, or Government Exams with Expert Guidance!</h1>
+            <h2>Your success is our success . Join thousands of students who trust us for personalized coaching, real-time test series, and in-depth study material</h2>
+            <h3>Prepare for NEET UG , Jee-Main , Jenpus UG , Boards and different Government exam 
+                for free .
+            </h3>
+        </hgroup>
+        <section>
+            <div class="container1">
+                <h2>Our Success Story</h2>
+                <div class="our-success">
+                    <ul class="img">
+                        <li><img src="../../../../../pexels-pixabay-51311.jpg" width="300px"  height="250px" alt=""></li>
+                        <li><img src="../../../../../photo-1524024973431-2ad916746881.jpeg" alt="" height="250px" width="300px"></li>
+                        <li><img src="../../../../../ai-generated-labrador-retriever-dog-picture_23-2150644976.avif" alt="" height="250px" width="300px"></li>
+                    </ul>
+                    <ul class="rank">
+                        <li>Neet UG Air - 216 (2018)</li>
+                        <li>Jee Mains - Air 234 (2022)</li>
+                        <li>SSC CHSL - AIR 512 (2017)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container2">
+                <h2>Dive into our courses with our premium batches</h2>
+
+                <ul class="img">
+                    <li><img src="#" alt="Course1"><a href="#" class="btn">Enrol Now</a></li>
+                    <li><img src="#" alt="Course2"><a href="#" class="btn">Enrol Now</a></li>
+                    <li><img src="#" alt="Course3"><a href="#" class="btn">Enrol Now</a></li>
+                </ul>
+
+            </div>
+        </section>
+    </article>
+    <footer>
+        <h1>Work hard and make it happen.</h1>
+        <div class="footer">
+            <p>Our Address :</p>
+            <address>
+                Barasat , Kolkata , WestBengal , 700124
+            </address>
+             <h4>Contact Us</h4>
+             <ul>
+              <li>koutuve30@gmail.com</li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>  
+    </footer>
+</div>
+</body>
+</html>
